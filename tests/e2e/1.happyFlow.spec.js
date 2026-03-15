@@ -3,6 +3,10 @@ import { test, expect } from '../../fixtures/fixtures.js';
 import { getTotalPrice } from '../../utils/helper.js';
 
 test.describe('1. Happy Flow: Verify User can submit order', () => {
+    test.beforeEach(async ({ loginPage }) => {
+        await loginPage.open();
+    });
+
     test('1.1. @smoke Verify user can add an item to the cart and submit order', async ({
         loginPage,
         homePage,
@@ -11,8 +15,6 @@ test.describe('1. Happy Flow: Verify User can submit order', () => {
         const { email, password } = testData.validUser;
         const itemToAdd = testData.items[0];
 
-        // Login with test credentials displayed on the website
-        await loginPage.open();
         await loginPage.login(email, password);
 
         // Add item to the cart
@@ -46,8 +48,6 @@ test.describe('1. Happy Flow: Verify User can submit order', () => {
         homePage,
     }) => {
         const { email, password } = testData.validUser;
-
-        await loginPage.open(testData.urls.login);
 
         // Verify instructions are displayed: 'Please use credentials Email: admin@admin.com Password: admin123'
         await expect(loginPage.credentialInstructions, 'Incorrect credential instructions').toHaveText(

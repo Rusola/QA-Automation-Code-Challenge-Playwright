@@ -8,7 +8,7 @@ End-to-end tests for the [QA Practice](https://qa-practice.netlify.app/auth_ecom
 |---|-------|-------|
 | 1 | **Happy Flow** | Add item to cart and submit order · Add multiple items and modify cart |
 | 2 | **File Upload** | Upload a valid file · Visual snapshot of the upload page |
-| 3 | **Login** | Invalid credentials rejection · Password field masking · Placeholder text |
+| 3 | **Login** | Invalid credentials rejection · Password field masking · Placeholder text · Header visibility |
 | 4 | **Invalid Shipping Address** | Validation errors on every empty shipping address detail |
 | 5 | **Contact Us** | Contact page accessible from the login page |
 | 6 | **Shopping Cart restriction** | User can not add more than 1 item of the same kind |
@@ -87,7 +87,7 @@ To stop you can press `Ctrl + C` in the terminal.
 - Reports: **HTML** (`playwright-report/`), **JSON** and **JUnit** (`test-results/`)
 - The tests are written in JavaScript, but I added a fixtures.d.ts file to provide type definitions so the editor can offer navigation.
 - The `potential setup` project was added only in case the site supports saving the storage state in the future. In the current setup, the auth test runs and is ready to save the storage state, it can be disabled by commenting out `potential setup` project in playwright.config.js.
-- The test tagged "@screenshot" runs only in Chrome. Therefore, after execution you should have 29 tests run in total: 10 in Chrome, 9 in Firefox, 9 in Safari, plus 1 setup test.
+- The test tagged "@screenshot" runs only in Chrome. Therefore, after execution you should have 32 tests run in total: 11 in Chrome, 10 in Firefox, 10 in Safari, plus 1 setup test.
 
 
 ## How did I test Shopping Cart?
