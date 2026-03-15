@@ -18,5 +18,9 @@ class ContactUsPage extends BasePage {
     get textarea() {
         return this.page.locator('p.text-center');
     }
+
+    get link() {
+        return this.textarea.getByRole('link', { name: 'HERE' });
+    }
 }
 export default ContactUsPage;
