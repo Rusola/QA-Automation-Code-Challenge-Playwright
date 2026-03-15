@@ -9,7 +9,7 @@ End-to-end tests for the [QA Practice](https://qa-practice.netlify.app/auth_ecom
 | 1 | **Happy Flow** | Add item to cart and submit order · Add multiple items and modify cart |
 | 2 | **File Upload** | Upload a valid file · Visual snapshot of the upload page |
 | 3 | **Login** | Invalid credentials rejection · Password field masking · Placeholder text |
-| 4 | **Invalid Shipping Address** | Validation errors on invalid / empty shipping address |
+| 4 | **Invalid Shipping Address** | Validation errors on empty shipping address |
 | 5 | **Contact Us** | Contact page accessible from the login page |
 | 6 | **Shopping Cart restriction** | User can not add more than 1 item of the same kind |
 
